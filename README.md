@@ -2,91 +2,117 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto foi desenvolvido como parte de um **Projeto Integrador** do curso de **Análise e Desenvolvimento de Sistemas do Senac**.
+Este projeto foi desenvolvido como parte do **Projeto Integrador** do curso de **Análise e Desenvolvimento de Sistemas do Senac**.
 
-O objetivo do projeto é a **obtenção de menção para aprovação** e continuidade no curso, aplicando conceitos fundamentais de lógica de programação utilizando Java.
+O objetivo do trabalho é aplicar conceitos fundamentais de lógica de programação utilizando Java, além de desenvolver organização em equipe, resolução de problemas e estruturação de código.
 
-O sistema consiste em um jogo da forca com interface baseada em **JOptionPane**, onde o jogador deve adivinhar uma palavra oculta com base em tentativas limitadas.
+O sistema consiste em um jogo da forca desenvolvido utilizando:
 
----
-
-## 🎯 Objetivo
-
-* Praticar lógica de programação
-* Trabalhar com estruturas de repetição e decisão
-* Manipular strings e arrays
-* Desenvolver organização de código em equipe
+* Estruturas condicionais
+* Estruturas de repetição
+* Arrays
+* ArrayList
+* Funções
+* Validação de entradas
 
 ---
 
-## 🧠 Como o jogo funciona
+# 🧠 Funcionalidades do Projeto
 
-1. O sistema define uma palavra secreta
-2. A palavra é exibida de forma oculta (ex: `_ _ _ _`)
-3. O jogador informa letras por meio de caixas de diálogo
-4. O sistema verifica:
-
-   * Se a letra existe na palavra
-   * Se já foi utilizada anteriormente
-5. O jogador vence quando descobre toda a palavra
-6. O jogador perde ao atingir o limite de tentativas
+✅ Cadastro do nome do jogador
+✅ Menu inicial de navegação
+✅ Criação da palavra secreta
+✅ Exibição da palavra oculta (`_ _ _`)
+✅ Validação de letras digitadas
+✅ Controle de letras repetidas
+✅ Controle de erros do jogador
+✅ Atualização dinâmica da palavra
+✅ Condição de vitória e derrota
+✅ Exibição das letras já utilizadas
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+# 🛠️ Tecnologias Utilizadas
 
 * Java
-* Lógica de programação
-* Interface gráfica com JOptionPane
+* Scanner
+* ArrayList
+* Lógica de Programação
 
 ---
 
-## 🚀 Como executar o projeto
+# 📂 Estrutura do Projeto
+
+## Funções principais
+
+| Função              | Responsabilidade                |
+| ------------------- | ------------------------------- |
+| `IniciarJogo()`     | Inicia o sistema                |
+| `MenuDeContinuar()` | Exibe o menu inicial            |
+| `criarPalavra()`    | Recebe a palavra secreta        |
+| `EsconderPalavra()` | Cria o estado oculto da palavra |
+| `mostrarPalavra()`  | Mostra a palavra atual          |
+| `MostrarLetras()`   | Exibe letras utilizadas         |
+| `condicoes()`       | Controla regras do jogo         |
+| `ResumoJogo()`      | Exibe resultado final           |
+| `FluxoDoJogo()`     | Controla o loop principal       |
+
+---
+
+# ▶️ Como Executar
 
 1. Clone o repositório:
 
-```id="xk3n8c"
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
 ```
 
-2. Abra o projeto em sua IDE (IntelliJ, Eclipse, VS Code)
+2. Abra o projeto em sua IDE Java:
 
-3. Execute a classe principal:
+* IntelliJ IDEA
+* Eclipse
+* VS Code
 
-```id="q2z1mf"
+3. Execute o arquivo:
+
+```bash
 JogoDaForca.java
 ```
 
 ---
 
-## ⚠️ Observações
+# 🎯 Objetivos de Aprendizagem
 
-* Este projeto foi desenvolvido com foco educacional
-* Utiliza interface gráfica simples com JOptionPane
-* O foco principal está na lógica do jogo
+Durante o desenvolvimento do projeto foram praticados:
+
+* Organização de código
+* Separação em funções
+* Manipulação de arrays
+* Estruturas de repetição
+* Estruturas condicionais
+* Controle de fluxo
+* Validação de entradas
+* Lógica de jogos simples
 
 ---
 
-## 💡 Melhorias futuras
+# 🚀 Melhorias Futuras
 
-* Implementação de categorias de palavras
-* Interface gráfica mais avançada (Swing ou JavaFX)
+* Migração para interface gráfica com JOptionPane
+* Sistema de categorias
+* Escolha aleatória de palavras
 * Sistema de pontuação
-* Opção de jogar novamente
+* Reinício automático do jogo
+* Melhorias visuais
 
 ---
 
-## 📚 Aprendizados
+# 📚 Projeto Acadêmico
 
-Durante o desenvolvimento deste projeto, foram trabalhados:
-
-* Organização em equipe
-* Divisão de responsabilidades
-* Resolução de problemas lógicos
-* Debugging e testes
+Projeto desenvolvido exclusivamente para fins educacionais como requisito avaliativo do curso de **Análise e Desenvolvimento de Sistemas - Senac**.
 
 ---
 
-## 📄 Licença
+# 📄 Licença
 
 Projeto acadêmico sem fins comerciais.
