@@ -19,16 +19,16 @@ O sistema consiste em um jogo da forca desenvolvido utilizando:
 
 # 🧠 Funcionalidades do Projeto
 
-✅ Cadastro do nome do jogador
-✅ Menu inicial de navegação
-✅ Criação da palavra secreta
-✅ Exibição da palavra oculta (`_ _ _`)
-✅ Validação de letras digitadas
-✅ Controle de letras repetidas
-✅ Controle de erros do jogador
-✅ Atualização dinâmica da palavra
-✅ Condição de vitória e derrota
-✅ Exibição das letras já utilizadas
+* ✅ Cadastro do nome do jogador 
+* ✅ Menu inicial de navegação 
+* ✅ Criação da palavra secreta 
+* ✅ Exibição da palavra oculta (`_ _ _`) 
+* ✅ Validação de letras digitadas 
+* ✅ Controle de letras repetidas 
+* ✅ Controle de erros do jogador 
+* ✅ Atualização dinâmica da palavra 
+* ✅ Condição de vitória e derrota 
+* ✅ Exibição das letras já utilizadas 
 
 ---
 
@@ -47,15 +47,15 @@ O sistema consiste em um jogo da forca desenvolvido utilizando:
 
 | Função              | Responsabilidade                |
 | ------------------- | ------------------------------- |
-| `IniciarJogo()`     | Inicia o sistema                |
-| `MenuDeContinuar()` | Exibe o menu inicial            |
+| `iniciarJogo()`     | Inicia o sistema                |
+| `menuDeContinuar()` | Exibe o menu inicial            |
 | `criarPalavra()`    | Recebe a palavra secreta        |
-| `EsconderPalavra()` | Cria o estado oculto da palavra |
+| `esconderPalavra()` | Cria o estado oculto da palavra |
 | `mostrarPalavra()`  | Mostra a palavra atual          |
-| `MostrarLetras()`   | Exibe letras utilizadas         |
+| `mostrarLetras()`   | Exibe letras utilizadas         |
 | `condicoes()`       | Controla regras do jogo         |
-| `ResumoJogo()`      | Exibe resultado final           |
-| `FluxoDoJogo()`     | Controla o loop principal       |
+| `resumoJogo()`      | Exibe resultado final           |
+| `fluxoDoJogo()`     | Controla o loop principal       |
 
 ---
 
