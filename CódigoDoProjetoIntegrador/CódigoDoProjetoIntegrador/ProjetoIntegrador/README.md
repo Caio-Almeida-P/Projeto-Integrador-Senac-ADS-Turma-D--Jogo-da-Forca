@@ -64,7 +64,7 @@ O sistema consiste em um jogo da forca desenvolvido utilizando:
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/Caio-Almeida-P/Projeto-Integrador-Senac-ADS-Turma-D--Jogo-da-Forca.git
 ```
 
 2. Abra o projeto em sua IDE Java:
