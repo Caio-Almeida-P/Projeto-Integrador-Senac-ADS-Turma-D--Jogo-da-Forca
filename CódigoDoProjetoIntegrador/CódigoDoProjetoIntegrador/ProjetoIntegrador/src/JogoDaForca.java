@@ -4,10 +4,10 @@ import java.util.List;
 
 public class JogoDaForca {
     static Scanner ler = new Scanner(System.in);
-    static List<Character> Letras = new ArrayList<>();
+    static List<Character> letras = new ArrayList<>();
 
     static String palavra;
-    static char[] PalavraOriginal;
+    static char[] palavraOriginal;
     static char[] estadoAtual;
     static int erros;
     static boolean venceu;
@@ -15,7 +15,7 @@ public class JogoDaForca {
     static char letraDigitada;
     static String nome;
 
-    public static void IniciarJogo() {
+    public static void iniciarJogo() {
         System.out.println("==================================================" + "\n=================== Jogo da Forca ================" + "\n==================================================");
 
         System.out.print("\nDigite o nome do jogador: ");
@@ -23,11 +23,11 @@ public class JogoDaForca {
 
         System.out.println("Bem-vindo " + nome + " ao jogo da Forca.");
 
-        MenuDeContinuar();
+        menuDeContinuar();
 
     }
 
-    public static void MenuDeContinuar() {
+    public static void menuDeContinuar() {
         System.out.print("Digite 1. para Continuar ou 2. para Finalizar o Jogo." + "\nOpção Escolhida: ");
         int opcao = ler.nextInt();
 
@@ -54,25 +54,25 @@ public class JogoDaForca {
         System.out.print("Digite a palavra: ");
         palavra = ler.next().toUpperCase();
 
-        EsconderPalavra();
+        esconderPalavra();
     }
 
-    public static void EsconderPalavra() {
+    public static void esconderPalavra() {
         // Array que transforma a palavra em _ _ _ _
 
-        PalavraOriginal = new char[palavra.length()];
+        palavraOriginal = new char[palavra.length()];
 
         for (int i = 0; i < palavra.length(); i++) {
-            PalavraOriginal[i] = palavra.charAt(i);
+            palavraOriginal[i] = palavra.charAt(i);
         }
 
-        estadoAtual = new char[PalavraOriginal.length];
+        estadoAtual = new char[palavraOriginal.length];
         for (int i = 0; i < estadoAtual.length; i++) {
             estadoAtual[i] = '_';
         }
 
         // array para mostrar a palavra
-        FluxoDoJogo();
+        fluxoDoJogo();
     }
 
     public static void mostrarPalavra() {
@@ -82,11 +82,11 @@ public class JogoDaForca {
         }
     }
 
-    public static void MostrarLetras() {
+    public static void mostrarLetras() {
 
 
         System.out.print("Letras utilizadas: ");
-        for (Character letra : Letras) {
+        for (Character letra : letras) {
             System.out.print(letra + ", ");
         }
     }
@@ -94,8 +94,8 @@ public class JogoDaForca {
     public static void condicoes() {
         achouALetra = false;
 
-        for (int i = 0; i < PalavraOriginal.length; i++) {
-            if (PalavraOriginal[i] == letraDigitada) {
+        for (int i = 0; i < palavraOriginal.length; i++) {
+            if (palavraOriginal[i] == letraDigitada) {
                 estadoAtual[i] = letraDigitada;
                 achouALetra = true;
             }
@@ -113,7 +113,8 @@ public class JogoDaForca {
         }
     }
 
-    public static void ResumoJogo() {
+    public static void resumoJogo() {
+        
         System.out.println("\n\nResultado da gameplay");
         if (venceu) {
             System.out.println("Parabéns, você acertou a palavra");
@@ -125,10 +126,7 @@ public class JogoDaForca {
         }
     }
 
-    public static void regras() {
-    }
-
-    public static void FluxoDoJogo() {
+    public static void fluxoDoJogo() {
 
         erros = 0;
         venceu = false;
@@ -138,7 +136,7 @@ public class JogoDaForca {
 
             System.out.println("\nErros: " + erros);
 
-            MostrarLetras(); // função para mostrar as letras já utilizadas
+            mostrarLetras(); // função para mostrar as letras já utilizadas
 
             System.out.print("\nDigite uma letra: ");
 
@@ -150,21 +148,23 @@ public class JogoDaForca {
                 continue;
             }
 
-            if (Letras.contains(letraDigitada)) { // Verificando se a entrada é repetida ou nova
+            if (letras.contains(letraDigitada)) { // Verificando se a entrada é repetida ou nova
                 System.out.println("Erro: Letra já digitada!");
                 continue;
 
             } else {
-                Letras.add(letraDigitada);
+                letras.add(letraDigitada);
             }
 
             condicoes(); // função com as condições do jogo, como trocar as _ por letras e verificar se ainda há _.
         }
 
-        ResumoJogo(); // função com o resumo do jogo, mostrando a vitória ou a derrota
+        resumoJogo(); // função com o resumo do jogo, mostrando a vitória ou a derrota
+
+        letras.clear();
     }
 
     public static void main(String[] args) {
-        IniciarJogo();
+        iniciarJogo();
     }
 }
